@@ -1,6 +1,6 @@
 FROM alancnet/alpine-mono:5
 
-ENV SCRIPTCS_VERSION 0.16.1
+ENV SCRIPTCS_VERSION 0.17.1
 
 RUN mkdir -p /tmp/src && \
       cd /tmp/src && \
