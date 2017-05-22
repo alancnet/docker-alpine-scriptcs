@@ -1,4 +1,4 @@
-FROM alancnet/docker-alpine-mono:5
+FROM alancnet/alpine-mono:5
 
 ENV SCRIPTCS_VERSION 0.16.1
 
