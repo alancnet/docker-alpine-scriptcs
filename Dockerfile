@@ -8,7 +8,7 @@ RUN mkdir -p /tmp/src && \
       tar xzf v$SCRIPTCS_VERSION.tar.gz && \
       cd /tmp/src/scriptcs-$SCRIPTCS_VERSION && \
       mono .nuget/NuGet.exe restore ./ScriptCs.sln && xbuild ./ScriptCs.sln /property:Configuration=Release /nologo /verbosity:normal && \
-      cp -r /tmp/src/scriptcs-0.16.1/src/ScriptCs/bin/Release /usr/bin/scriptcs
+      cp -r /tmp/src/scriptcs-$SCRIPTCS_VERSION/src/ScriptCs/bin/Release /usr/bin/scriptcs
 
 ENV PATH $PATH:/usr/bin/scriptcs/
 RUN echo '#!/usr/bin/env ash' > /usr/bin/scriptcs/scriptcs && echo 'mono "/usr/bin/scriptcs/scriptcs.exe" $@' >> /usr/bin/scriptcs/scriptcs && chmod +x /usr/bin/scriptcs/scriptcs
